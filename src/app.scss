@@ -1,0 +1,401 @@
+@import "@fontsource/manrope";
+@import "@fontsource/source-code-pro";
+@import "@fontsource/source-sans-pro";
+
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  border: none;
+  background: transparent;
+  font: inherit;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  font-family: "Source Sans Pro";
+  font-family: "Manrope";
+  text-align: left;
+  background: #f9f1e9;
+  overflow: scroll;
+}
+
+.modal-window {
+  width: 75% !important;
+}
+
+pre {
+  font-family: "Source Code Pro";
+}
+
+#app {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+header {
+  background: #cecde1;
+  color: #25172a;
+  padding: 1em;
+  display: flex;
+}
+
+nav {
+  background: #cecde1;
+  color: #25172a;
+  display: flex;
+
+  li {
+    list-style: none;
+  }
+
+  li:not(:last-child):after {
+    white-space: pre;
+    content: " : ";
+  }
+
+  li:last-child a {
+    text-decoration: none;
+  }
+}
+
+main, section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: flex-start;
+}
+
+main {
+  menu,
+  ul {
+    padding-left: 2em;
+  }
+}
+
+:any-link {
+  text-decoration: underline;
+}
+
+th {
+  font-weight: bold;
+}
+
+button {
+  background: #cecde1;
+  border: 1px solid #aeadc1;
+  padding: 0.5ch 1ch;
+
+  &:hover {
+    background: #dedee1;
+  }
+  &:active {
+    background: #9e9eb1;
+  }
+}
+
+input:not([type]),
+input[type=text],
+input[type=number],
+textarea {
+  background: #fff;
+  border: 1px solid #aeadc1;
+  padding: 0.5ch 1ch;
+}
+
+select {
+  background: #cecde1;
+  border: 1px solid #aeadc1;
+  padding: 0.5ch 1ch;
+}
+
+main {
+  h1 {
+    font-weight: bold;
+  }
+  h2 {
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+th, td {
+  padding: 0 2ch 0 0;
+  &:last-child {
+    padding: 0;
+  }
+}
+
+// section {
+//   margin: 0.5em 0;
+// }
+
+// html,
+// body,
+// #app {
+//   width: 100%;
+//   height: 100%;
+//   background: #fff;
+//   color: #000;
+// }
+
+// a {
+//   text-decoration: underline;
+// }
+
+// #crumbs {
+//   background: #eee;
+//   display: flex;
+//   gap: 0.25em;
+//   padding: 0.25em 0.25em 0 0.25em;
+//   border-top: 1px solid #fff;
+//   box-shadow: inset rgba(#000, 0.1) 0 -5px 5px;
+//   overflow: hidden;
+
+//   >div {
+//     display: contents;
+//   }
+
+//   div:not(:last-child)::after {
+//     content: "→";
+//   }
+
+//   a {
+//     text-decoration: none;
+//   }
+// }
+
+// #app>main {
+//   padding: 1em;
+// }
+
+// // nav:nth-of-type(1) { background: #fee; }
+// // nav:nth-of-type(2) { background: #ffe; }
+// // nav:nth-of-type(3) { background: #efe; }
+// // nav:nth-of-type(4) { background: #eff; }
+// // nav:nth-of-type(5) { background: #eef; }
+
+// // nav {
+// //   display: flex;
+// //   border-top: 1px solid #fff;
+// //   box-shadow: inset rgba(#000, 0.1) 0 -5px 5px;
+// //   overflow: hidden;
+// //   padding: 0.25em 0.5em;
+
+// //   span {
+// //     display: flex;
+// //     align-items: center;
+// //     margin-left: 0.5em;
+// //     margin-right: 1em;
+// //     font-weight: bold;
+// //     color: #666;
+// //     text-shadow: #fff 1px 1px;
+// //   }
+
+// //   a {
+// //     display: block;
+// //     text-decoration: none;
+// //     padding: 0.25em 0.5em;
+// //     border-top: 1px solid transparent;
+// //     border-left: 1px solid transparent;
+// //     border-right: 1px solid transparent;
+
+// //     &[aria-current] {
+// //       // color: #fff;
+// //       background: #fff;
+// //       box-shadow: rgba(#000, 0.2) 2px 2px 2px;
+// //       border-top: 1px solid #000;
+// //       border-left: 1px solid #000;
+// //       border-right: 1px solid #000;
+// //       border-bottom: 1px solid #000;
+// //     }
+// //   }
+// // }
+
+// #app {
+//   display: grid;
+//   grid-template:
+//     "top  top" max-content
+//     "left main" 1fr /
+//     15em 1fr;
+
+//   >nav:nth-of-type(1) {
+//     grid-area: top;
+//   }
+
+//   >nav:nth-of-type(2) {
+//     grid-area: left;
+//   }
+
+//   >main {
+//     grid-area: main;
+//   }
+// }
+
+// #app>nav {
+//   >h2 {
+//     padding: 1em;
+//     font-weight: 900;
+//     color: #999;
+//   }
+//   a {
+//     display: block;
+//     text-decoration: none;
+//     padding: 1em;
+
+//     &:hover {
+//       background: #eaeaeb;
+//     }
+
+//     &[aria-current] {
+//       color: #fff;
+//       background: #27272a;
+//     }
+//   }
+// }
+
+// #app>nav:nth-of-type(1) {
+//   display: flex;
+//   overflow: hidden;
+//   border-bottom: 1px solid #e4e4e7;
+// }
+
+// #app>nav:nth-of-type(2) {
+//   display: flex;
+//   flex-direction: column;
+//   overflow: hidden
+// }
+
+// main {
+
+//   background: #f4f4f5;
+//   border-left: 1px solid #e4e4e7;
+//   color: #7d7d7e;
+
+//   >h1 {
+//     font-size: 2rem;
+//     color: #000;
+//     margin-top: 1rem !important;
+//   }
+
+//   >h2 {
+//     margin-bottom: 2rem;
+//   }
+
+//   >section {
+//     color: #000;
+//     background: #fff;
+//     border-radius: 8px;
+//     // box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 1px;
+//     border: 1px solid #e3e3e6;
+//     padding: 1rem;
+
+//     >* {
+//       margin-top: 1rem;
+//     }
+
+//     >:first-child {
+//       margin-top: 0;
+//     }
+
+//     h1 {
+//       font-size: 1.5rem;
+//     }
+
+//     h2 {
+//       font-size: 1.2rem;
+//     }
+
+//   }
+
+//   >table {
+//     color: #000;
+//     background: #fff;
+//     border-radius: 8px;
+//     border: 1px solid #e3e3e6;
+//     border-collapse: separate;
+//     border-spacing: 0;
+//     // box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 10px;
+
+//     thead {
+//       background: #fafafa;
+//     }
+
+//     td,
+//     th {
+//       padding: 1em 1.5em;
+//       // border: 0 solid transparent;
+//       // border-width: 1em 2em;
+//     }
+
+//     th {
+//       font-weight: bold;
+//     }
+
+//   }
+
+//   label {
+//     font-weight: bold;
+//     display: block;
+//   }
+
+//   ul,
+//   ol {
+//     padding-left: 1em;
+//   }
+
+//   pre {
+//     font-family: monospace;
+//   }
+
+//   h1,
+//   h2,
+//   h3,
+//   h4,
+//   h5,
+//   h6,
+//   section,
+//   p,
+//   menu,
+//   ul,
+//   ol,
+//   table,
+//   pre,
+//   blockquote {
+//     margin-top: 1em;
+//   }
+
+//   menu {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
+
+// button,
+// select {
+//   background: #eee;
+//   padding: 0.25em 0.5em;
+//   border: 1px solid #aaa;
+//   border-radius: 0.2em;
+
+//   &:hover {
+//     background: #ddd;
+//   }
+
+//   &:active {
+//     background: #aaa;
+//   }
+// }
+
+// textarea,
+// input:not([type]),
+// input[type=text],
+// input[type=number] {
+//   width: 100%;
+//   padding: 0.25em 0.5em;
+//   border: 1px solid #aaa;
+//   border-radius: 0.2em;
+// }
